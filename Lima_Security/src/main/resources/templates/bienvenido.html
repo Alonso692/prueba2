@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.orge/extras/spring-security">
+	
+<head>
+		<meta charset="UTF-8"></meta>
+		<title>Lima Security Life</title>
+		
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 			 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript"
+				src="ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
+		</script>
+		
+		<link
+			href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+			rel="stylesheet" id="bootstrap-css">
+		</link>
+		
+		<link rel="stylesheet" th:href ="@{/css/estilos.css}"/>
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
+		
+		<script src="code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		
+	</head>
+	
+	<body style="background-color: silver;" >
+		<div th:replace="fragments/header :: header"></div>
+		
+		
+			<div class="jumbotron"  >
+  				<div class="container text-right">
+    				<h1>Lima Security Life</h1>  
+    				
+    				<br>    
+    				<br>
+    				<br>
+    				<p>Nada más importante	que tu seguridad y la de tu familia</p>
+    				<br>
+    				<br>
+    				<a class="btn btn-info btn-lg" th:href="@{/servicio/listar}">Nuestros Servicios</a>
+  				</div>
+  				
+  				
+			</div>
+			
+			
+		<div class="container-fluid bg-3 text-center" style="background-color: #DADADA; margin-top: -30px" >    
+  				<h2>¿Quienes Somos?</h2><br>
+  				<h4>Somos una empresa centrada en el rubro de seguridad, nos encargamos de la instalación y monitoreo de sistemas 
+  						de seguridad para distintos ambientes . Contamos con un equipo especializado 
+  					comprometido en mantener tu hogar o local a salvo utilizando tecnología de punta que existe actualmente 
+  						en el mercado como sensores de movimiento, cámaras de alta definición, alarmas,etc.</h4><br>
+  		</div>
+    
+    
+    		<!--------------------¿QUE OFRECEMOS?---------------------------->	
+    		<div id="portfolio" class="container-fluid text-center bg-grey">
+  				<h2>¿Que Ofrecemos?</h2><br>
+  					<div class="row text-center slideanim">
+    					<div class="col-sm-4">
+     						<div class="thumbnail">
+        					<img th:src="@{/imagenes/sujeto1.jpg}" alt="dispositivo-card" width="400" height="300">
+        						<h3><strong>Dispositivos Tecnologicos</strong></h3>
+        						<p>Productos de Calidad con nuestros Sistemas de Seguridad mas importantes a nivel tecnologico.</p>
+        						<a class="btn btn-info btn-lg" th:href="@{/dispositivo/listar}">Ver más</a>
+      						</div>
+    					</div>
+    					<div class="col-sm-4">
+      						<div class="thumbnail">
+        						<img th:src="@{/imagenes/camera1.jpg}" alt="plan-card" width="400" height="300">
+        						<h3><strong>Los Mejores Planes</strong></h3>
+        						<p>Contamos con los mejores Planes que se adecuan a todas tus necesidades.</p>
+        						<a class="btn btn-info btn-lg" th:href="@{/plan/listar}">Ver más</a>
+      						</div>
+    					</div>
+    					<div class="col-sm-4">
+     						<div class="thumbnail">
+        						<img th:src="@{/imagenes/seguridad1.jpg}" alt="servicio-card" width="400" height="300">
+        						<h3><strong>Servicios Incomparables</strong></h3>
+        						<p>Nuestros servicios especializados contemplan todas las necesidades de nuestros clientes</p>
+        						<a class="btn btn-info btn-lg" th:href="@{/servicio/listar}">Ver más</a>
+      						</div>
+    					</div>
+  					</div><br>
+ 			</div>
+			</div><br>
+
+				<!-- Container (Services Section) -->
+				<div id="services" class="container-fluid text-center" style="background-color:#DADADA ">
+  					<h2>¿Por que contratar Lima Security Life?</h2>
+  						<br>
+  						<br>
+  						<div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd loguito"></span>
+      <h4>ACCESIBLE</h4>
+      <p>Nuestros precios son más accesibles en comparacion a la competencia</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock loguito"></span>
+      <h4>SEGURO</h4>
+      <p>Garantizamos seguridad con la ultima tecnologia del mercado</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-check loguito"></span>
+      <h4>CONFIABLE</h4>
+      <p>Nuestros especialistas son destacados por su atencion y empatia</p>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!--------------------CONTACTO------------------------------>
+				<div id="contact" class="container-fluid bg-grey">
+  					<h2 class="text-center">CONTACTO</h2><br>
+  						<div class="row">
+    						<div class="col-sm-5">
+     							<p>Contactanos y te responderemos en menos de 24 horas.</p>
+      							<p><span class="glyphicon glyphicon-map-marker"></span> Lima, PE</p>
+      							<p><span class="glyphicon glyphicon-phone"></span> +51 99999999</p>
+      							<p><span class="glyphicon glyphicon-envelope"></span> contac@lsl.pe</p>
+    						</div>
+    				<div class="col-sm-7 slideanim">
+      					<div class="row">
+        					<div class="col-sm-6 form-group">
+          						<input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+        					</div>
+        					<div class="col-sm-6 form-group">
+          						<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        					</div>
+      					</div>
+      				<textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>
+      					<div class="row">
+        					<div class="col-sm-12 form-group">
+          						<button class="btn btn-info pull-middle" type="submit">Enviar</button>
+        					</div>
+      					</div>
+    				</div>
+  						</div>
+						</div>
+		
+		<div th:replace="fragments/footer :: footer"></div>
+	</body>
+	
+</html>
